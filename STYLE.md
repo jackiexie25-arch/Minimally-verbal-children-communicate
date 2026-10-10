@@ -1,3 +1,5 @@
+> **Note:** the page is now branded as **Porto**. Logo, colours, fonts and illustration colours follow [`brand/porto-brand-guidelines.md`](brand/porto-brand-guidelines.md); the palette and type below are the original pre-brand brief. Layout, spacing and components still follow this file.
+
 # Style brief
 
 Reference: gatheredhere.com.au. I studied it from two screenshots you sent: the desktop hero and a spot illustration. I couldn't load the live site. The hex values below are sampled from the screenshots and rounded, so treat them as close matches, not exact brand values.

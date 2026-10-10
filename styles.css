@@ -1,22 +1,39 @@
 /* ==========================================================================
-   [PRODUCT NAME] waitlist — single stylesheet, mobile-first.
-   Palette and type follow STYLE.md.
+   Porto waitlist — single stylesheet, mobile-first.
+   Layout follows STYLE.md; colours, type and logo follow
+   brand/porto-brand-guidelines.md.
    ========================================================================== */
 
 :root {
-  --bg: #e8f1f1;
-  --panel: #f5f9f9;
-  --surface: #ffffff;
-  --ink: #1d4a4d;        /* headings, button text, borders */
-  --text: #3e5f61;       /* body copy */
-  --accent: #f7d96b;     /* buttons, illustration fills */
-  --deco: #9dbdbd;       /* decorative shapes only */
-  --line: #2b3436;       /* illustration strokes */
-  --border-soft: #d5e3e3;
+  /* Porto brand tokens */
+  --ground: #F3F1FA;
+  --surface: #FFFFFF;
+  --blob: #E7E3F4;
+  --ink: #24304F;
+  --ink-soft: #4A5372;
+  --muted: #646A88;
+  --control-border: #7F84A3;
+  --apricot: #F5B07A;
+  --apricot-deep: #E3894A;
+  --sky: #C9DAF2;
+  --rose: #F4CFC6;
+  --success: #2F6E4E;
+  --shadow-button: 3px 3px 0 #24304F;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Figtree", system-ui, sans-serif;
+
+  /* Page roles, mapped onto the brand tokens */
+  --bg: var(--ground);
+  --panel: var(--surface);
+  --text: var(--ink-soft);
+  --accent: var(--apricot);
+  --accent-hover: var(--apricot-deep);
+  --deco: var(--sky);        /* decorative shapes only */
+  --border-soft: var(--blob);
   --error: #9b2c2c;
 
-  --font-head: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-head: var(--font-display);
+  --font-body: var(--font-sans);
 
   --radius-sm: 10px;
   --radius-lg: 20px;
@@ -52,13 +69,13 @@ img, svg { display: block; max-width: 100%; }
 
 h1, h2, h3 {
   font-family: var(--font-head);
-  font-variation-settings: "SOFT" 100, "WONK" 0;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--ink);
   letter-spacing: -0.01em;
+  text-wrap: balance;
   margin: 0;
 }
-h1 { font-size: clamp(2.1rem, 5vw, 3.75rem); line-height: 1.1; font-weight: 400; }
+h1 { font-size: clamp(2.1rem, 5vw, 3.75rem); line-height: 1.1; }
 h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.15; }
 h3 { font-size: 1.3rem; line-height: 1.25; font-weight: 600; }
 
@@ -70,7 +87,6 @@ a:hover { text-decoration-thickness: 2.5px; }
 :focus-visible {
   outline: 3px solid var(--ink);
   outline-offset: 3px;
-  box-shadow: 0 0 0 7px var(--accent);
   border-radius: 4px;
 }
 
@@ -127,7 +143,7 @@ a:hover { text-decoration-thickness: 2.5px; }
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-.btn:hover { transform: translate(1px, 1px); box-shadow: 3px 3px 0 var(--ink); text-decoration: none; }
+.btn:hover { background: var(--accent-hover); transform: translate(1px, 1px); box-shadow: 3px 3px 0 var(--ink); text-decoration: none; }
 .btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
 .btn .chev { font-size: 1.4em; line-height: 0; margin-top: -2px; }
 
@@ -161,7 +177,7 @@ a:hover { text-decoration-thickness: 2.5px; }
   white-space: nowrap;
 }
 @media (max-width: 479px) { .wordmark { font-size: 1.05rem; } }
-.wordmark svg { width: 28px; height: 28px; flex: none; }
+.wordmark img { height: 46px; width: auto; flex: none; }
 
 .nav-links { display: none; }
 
@@ -225,9 +241,8 @@ a:hover { text-decoration-thickness: 2.5px; }
 
 .form-card .form-title {
   font-family: var(--font-head);
-  font-variation-settings: "SOFT" 100, "WONK" 0;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--ink);
   margin-bottom: 4px;
 }
@@ -252,24 +267,24 @@ a:hover { text-decoration-thickness: 2.5px; }
   font-size: 1.0625rem;
   color: var(--ink);
   background: var(--surface);
-  border: 1.5px solid var(--ink);
+  border: 1.5px solid var(--control-border);
   border-radius: var(--radius-sm);
   appearance: none;
   -webkit-appearance: none;
 }
 .field select {
   padding-right: 44px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1.5l6 6 6-6' fill='none' stroke='%231d4a4d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1.5l6 6 6-6' fill='none' stroke='%2324304F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
 }
-.field input::placeholder { color: #587375; opacity: 1; }
+.field input::placeholder { color: var(--muted); opacity: 1; }
 
 .field input:focus-visible,
 .field select:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 0;
-  box-shadow: 0 0 0 6px var(--accent);
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px var(--sky);
   border-radius: var(--radius-sm);
 }
 
@@ -340,7 +355,7 @@ section { padding-block: var(--section-y); }
   width: 100%;
   height: 132px;
   margin-bottom: 20px;
-  background: var(--panel);
+  background: var(--ground);
   border-radius: 14px;
   display: grid;
   place-items: center;
@@ -353,7 +368,7 @@ section { padding-block: var(--section-y); }
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--ink);
-  background: var(--accent);
+  background: var(--sky);
   border-radius: 999px;
   padding: 2px 12px;
 }
