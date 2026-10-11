@@ -1,6 +1,6 @@
 # Porto — waitlist landing page
 
-A plain static "join the waitlist" page for Porto, a family-controlled profile app for minimally verbal autistic children.
+A plain static "join the waitlist" page for Porto, a family-controlled profile app for minimally verbal children.
 
 - No framework, no build step: `index.html`, `success.html`, `styles.css`.
 - Sign-ups go to **Netlify Forms** (form name: `waitlist`). There is no custom backend.
@@ -18,13 +18,14 @@ A plain static "join the waitlist" page for Porto, a family-controlled profile a
 | `brand/` | Porto brand guidelines, white logo and app icon |
 | `STYLE.md` | Original layout brief (the palette and type in it are superseded by the Porto brand) |
 
-## Before launch: replace the placeholder
+## Contact and social links
 
-Replace `[TEAM EMAIL]` (footer `mailto:` link in `index.html` and `success.html`):
+The footer of `index.html` and `success.html` has:
 
-```sh
-grep -rn "\[TEAM EMAIL\]" .
-```
+- Team email: porto.communicate@gmail.com
+- Icon links (open in a new tab) to Facebook, LinkedIn and Instagram. To change a link, edit the `href` in the `<nav class="social">` block on both pages.
+
+Brand icons are from Font Awesome Free 6.5.2 (CC BY 4.0).
 
 ## Run locally
 

@@ -423,6 +423,27 @@ section { padding-block: var(--section-y); }
 }
 .site-footer .privacy { max-width: 40rem; color: var(--ink); font-weight: 500; }
 
+.social ul {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.social a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--ink);
+  background: var(--ground);
+  border: 1px solid var(--blob);
+  border-radius: 50%;
+  transition: background-color 0.12s ease;
+}
+.social a:hover { background: var(--sky); }
+.social svg { width: 20px; height: 20px; fill: currentColor; }
+
 /* ---------- Thank-you page ---------- */
 
 .thanks {
