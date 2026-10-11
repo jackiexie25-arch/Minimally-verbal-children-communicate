@@ -22,7 +22,7 @@ A plain static "join the waitlist" page for Porto, a family-controlled profile a
 
 The footer of `index.html` and `success.html` has:
 
-- Team email: porto.communicate@gmail.com
+- Team email: porto.communicate@gmail.com, as a `mailto:` link (opens the visitor's default email app) plus a "write to us in Gmail" link that opens Gmail's compose window in a new tab
 - Icon links (open in a new tab) to Facebook, LinkedIn and Instagram. To change a link, edit the `href` in the `<nav class="social">` block on both pages.
 
 Brand icons are from Font Awesome Free 6.5.2 (CC BY 4.0).

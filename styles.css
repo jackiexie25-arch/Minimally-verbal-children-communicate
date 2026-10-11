@@ -423,6 +423,8 @@ section { padding-block: var(--section-y); }
 }
 .site-footer .privacy { max-width: 40rem; color: var(--ink); font-weight: 500; }
 
+.email-alt { display: block; margin-top: 2px; }
+
 .social ul {
   display: flex;
   gap: 12px;
